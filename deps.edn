@@ -1,4 +1,4 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.9.0"}
         athos/prejenter {:git/url "https://github.com/athos/prejenter.git"
-                         :sha "4d792dd8ce562e536b9ef9d973c42c63784ece62"}}}
+                         :sha "24ea2cb7ce985af5840afe1d0e0b9c7015fd4247"}}}

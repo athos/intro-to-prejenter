@@ -3,7 +3,7 @@
 
 (def t
   (p/create-element
-   (fn [attrs lines]
+   (fn [attrs & lines]
      [:slide
       [:block (merge {:height 840
                       :text-align :center
@@ -15,7 +15,7 @@
 
 (def title
   (p/create-element
-   (fn [attrs [t]]
+   (fn [attrs t]
      (let [attrs (merge {:height 50
                          :font-size 60
                          :font-weight :bold
@@ -27,7 +27,7 @@
 
 (def body
   (p/create-element
-   (fn [attrs elems]
+   (fn [attrs & elems]
      [:block
       (merge {:height 670
               :vertical-align :middle}
@@ -36,7 +36,7 @@
 
 (def items
   (p/create-element
-   (fn [attrs items]
+   (fn [attrs & items]
      [:items attrs
       (map (fn [item]
              [:inline {:padding-top 15 :padding-bottom 15}
@@ -45,7 +45,7 @@
 
 (def lines
   (p/create-element
-   (fn [attrs items]
+   (fn [attrs & items]
      [:lines attrs
       (map (fn [line]
              [:inline {:padding-top 15 :padding-bottom 15}
@@ -54,6 +54,6 @@
 
 (def code
   (p/create-element
-   (fn [attrs [content]]
+   (fn [attrs content]
      [:text (merge {:font-family "Osaka"} attrs)
       content])))
